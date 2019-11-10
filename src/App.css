@@ -2,13 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +13,32 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  padding: 0 25px;
+  background-color: #eceeee;
+  height: 90vh;
+}
+
+.card {
+  background-color: #fff;
+  padding: 14px 8px;
+  margin-bottom: 8px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.add-card {
+  margin: 12px;
+  text-align: left;
+}
+.text-content {
+  margin: 12px;
+  flex-grow: 1;
+}
+.direction-arrow {
+  font-size: 2.5rem;
+  flex-grow: 0;
 }
