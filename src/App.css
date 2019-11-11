@@ -22,8 +22,17 @@
   height: 90vh;
 }
 
+.col-Header {
+  color: #ffffff;
+  line-height: 30px;
+}
+
+.plus-sign {
+  font-size: 2rem;
+}
+
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 14px 8px;
   margin-bottom: 8px;
   text-align: left;
@@ -33,8 +42,14 @@
 .add-card {
   margin: 12px;
   text-align: left;
+  display: flex;
+  align-items: baseline;
 }
-.text-content {
+.add-text {
+  margin: 12px;
+}
+
+.card-text-content {
   margin: 12px;
   flex-grow: 1;
 }

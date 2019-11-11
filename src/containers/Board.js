@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 
 import Column from '../components/Column'
 
@@ -9,11 +9,11 @@ const initBoardData = [
     cardData: [
       {
         text: "Buy eggs",
-        listID: 0
+        columnID: 0
       },
       {
         text: "Return text books to the campus store",
-        listID: 0
+        columnID: 0
       }
     ],
     colColor: "#8E6E95"
@@ -24,11 +24,11 @@ const initBoardData = [
     cardData: [
       {
         text: "Buy milk",
-        listID: 1
+        columnID: 1
       },
       {
         text: "Return something",
-        listID: 1
+        columnID: 1
       }
     ],
     colColor: "#39A59C"
@@ -39,11 +39,11 @@ const initBoardData = [
     cardData: [
       {
         text: "Buy peanut butter",
-        listID: 2
+        columnID: 2
       },
       {
         text: "Return another thing",
-        listID: 2
+        columnID: 2
       }
     ],
     colColor: "#344759"
@@ -54,11 +54,11 @@ const initBoardData = [
     cardData: [
       {
         text: "Buy jelly",
-        listID: 3
+        columnID: 3
       },
       {
         text: "Return more things",
-        listID: 3
+        columnID: 3
       }
     ],
     colColor: "#E8741E"
@@ -69,12 +69,13 @@ function Board() {
     const [boardData, setBoardData] = useState(initBoardData)
 
     const addItem = (text, boardIndex) => {
-        console.log(text, boardIndex);
-        
-        // let newBoardData = boardData;
-        // newBoardData[boardIndex].cardData.push(text);
-        // console.log(newBoardData);
-        // return setBoardData(newBoardData);
+        const newItem = {
+            text,
+            columnID: boardIndex
+        }
+        const newBoardData = [...boardData];
+        newBoardData[boardIndex].cardData.push(newItem);
+        setBoardData(newBoardData);
     }
 
     const columns = boardData.map((column, index) => {

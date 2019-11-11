@@ -1,11 +1,11 @@
 import React from "react";
 
-function Card({ text, listID }) {
+function Card({ text, columnID }) {
   return (
     <div className="card">
-      {listID > 0 && <span className="direction-arrow">&lt;</span>}
-      <span className="text-content">{text}</span>
-      {listID < 3 && <span className="direction-arrow">&gt;</span>}
+      {columnID > 0 && <span className="direction-arrow">&lt;</span>}
+      <span className="card-text-content">{text}</span>
+      {columnID < 3 && <span className="direction-arrow">&gt;</span>}
     </div>
   );
 }

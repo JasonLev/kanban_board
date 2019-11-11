@@ -17,9 +17,14 @@ function Column({ id,
     })
   return (
     <div className="column">
-      <p className="colHeader" style={{"backgroundColor": colColor, color: "#fff", lineHeight: "30px"}}>{name}</p>
+      <p className="col-Header" style={{ backgroundColor: colColor }}>
+        {name}
+      </p>
       {cards}
-      <p className="add-card" onClick={handleClick}>+ Add a Card</p>
+      <p className="add-card" onClick={handleClick}>
+        <span className="plus-sign">+</span>
+        <span className="add-text">Add a Card</span>
+      </p>
     </div>
   );
 }
